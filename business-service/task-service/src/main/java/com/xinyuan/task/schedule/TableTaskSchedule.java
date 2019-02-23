@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 public class TableTaskSchedule extends AbstractTaskSchedule {
 
     /**
-     * 自动建表
      */
     @Scheduled(fixedRate = 1000 * 5)
     public void checkTableTask() {
