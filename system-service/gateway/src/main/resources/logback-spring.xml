@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="PROJECT_NAME" value="darren-micro-gateway"/><!-- 项目名称 -->
-    <property name="LOG_HOME" value="D:/logs"/><!-- 日志路径 -->
+    <property name="PROJECT_NAME" name="darren-micro-gateway"/><!-- 项目名称 -->
+    <property name="LOG_HOME" name="D:/logs"/><!-- 日志路径 -->
 
     <!-- 控制台日志 -->
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">

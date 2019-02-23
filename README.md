@@ -7,6 +7,7 @@
     │  ├─log-service			日志服务
     │  ├─relation-service		关系服务
     │  ├─setup-service		设置服务
+    │  ├─task-service		定时任务执行服务
     │  └─user-service		用户服务
     ├─common-service		通用代码
     ├─interface-service		feign接口
