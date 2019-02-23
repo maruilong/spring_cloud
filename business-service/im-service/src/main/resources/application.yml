@@ -1,0 +1,29 @@
+#---------------------------------------------
+server:
+  port: 1520
+#---------------------------------------------
+spring:
+  application:
+    name: im-service
+  rabbitmq:
+    addresses: 192.168.1.189
+    port: 5672
+    username: mrl
+    password: shinian
+#---------------------------------------------
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.10:1300/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 10
+#---------------------------------------------
+#security:
+#  oauth2:
+#    resource:
+#      id: ${spring.application.name}
+#      user-info-uri: http://192.168.1.10:1360/user

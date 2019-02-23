@@ -1,0 +1,52 @@
+#---------------------------------------------
+server:
+  port: 1560
+#---------------------------------------------
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+    generate-ddl: true
+    show-sql: true
+  datasource:
+      url: jdbc:postgresql://192.168.1.15:5432/mrl?useSSL=false
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+  application:
+    name: log-service
+#---------------------------------------------
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.10:1300/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 10
+#---------------------------------------------
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+#---------------------------------------------
+#security:
+#  oauth2:
+#    resource:
+#      id: ${spring.application.name}
+#      user-info-uri: http://192.168.1.10:1360/user
+#    client:
+#      client-id: xinyuan
+#      client-secret: xinyuan1525
+#---------------------------------------------
